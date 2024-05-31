@@ -1,0 +1,508 @@
+table 'Analytics e receita por dia'
+	lineageTag: 2d177b70-d0ce-4dc9-801e-13d8a9b6212e
+
+	column Data
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 620fa0eb-1605-428a-ab76-fcb15feca652
+		summarizeBy: none
+		sourceColumn: Data
+
+		variation Variation
+			isDefault
+			relationship: e24318f0-a2e8-42df-a157-9b90d1f6068c
+			defaultHierarchy: LocalDateTable_7dce351b-dcfe-4592-b436-ffc80d375be7.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Média de espectadores'
+		dataType: double
+		formatString: 0
+		lineageTag: cc91baae-ed87-4ae1-99ca-e15972010fed
+		summarizeBy: sum
+		sourceColumn: Média de espectadores
+
+		annotation SummarizationSetBy = Automatic
+
+	column Seguidores
+		dataType: int64
+		formatString: 0
+		lineageTag: 64eebe33-d1d0-4c3a-9228-1e886dbe2b2b
+		summarizeBy: sum
+		sourceColumn: Seguidores
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Minutos transmitidos'
+		dataType: int64
+		formatString: 0
+		lineageTag: 210badf1-028c-42ac-9804-f1f426fb3a50
+		summarizeBy: sum
+		sourceColumn: Minutos transmitidos
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Minutos assistidos'
+		dataType: int64
+		formatString: 0
+		lineageTag: 2dba0e16-facb-438b-a34c-7066c9f50a4b
+		summarizeBy: sum
+		sourceColumn: Minutos assistidos
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Visualiz. ao vivo'
+		dataType: int64
+		formatString: 0
+		lineageTag: ffaac80a-7389-40d2-965b-ce09fdf30f84
+		summarizeBy: sum
+		sourceColumn: Visualiz. ao vivo
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Máximo de espectadores'
+		dataType: int64
+		formatString: 0
+		lineageTag: c5008a75-b370-4dbb-ade4-50d371b97377
+		summarizeBy: sum
+		sourceColumn: Máximo de espectadores
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Espectadores únicos'
+		dataType: int64
+		formatString: 0
+		lineageTag: 25b309ef-dffb-4480-85d5-ac960bd34c74
+		summarizeBy: sum
+		sourceColumn: Espectadores únicos
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Espectadores engajados'
+		dataType: int64
+		formatString: 0
+		lineageTag: 14284ad0-6f61-42ec-9060-6e947b4b1fd7
+		summarizeBy: sum
+		sourceColumn: Espectadores engajados
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Espectadores de hospedagem e raids (%)'
+		dataType: int64
+		formatString: 0
+		lineageTag: b699f2d6-91d0-4c1e-8804-5578140fe6fc
+		summarizeBy: sum
+		sourceColumn: Espectadores de hospedagem e raids (%)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Participantes do chat'
+		dataType: int64
+		formatString: 0
+		lineageTag: 608cd4e1-e644-4e42-8fdd-26f6f528fdf5
+		summarizeBy: sum
+		sourceColumn: Participantes do chat
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Mensagens do chat'
+		dataType: int64
+		formatString: 0
+		lineageTag: 39a33d3d-3853-4a09-bc61-795502f7dc3e
+		summarizeBy: sum
+		sourceColumn: Mensagens do chat
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Clipes criados'
+		dataType: int64
+		formatString: 0
+		lineageTag: 6a355eb2-591f-42a4-a827-113078f1120b
+		summarizeBy: sum
+		sourceColumn: Clipes criados
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Visualiz. de clipes'
+		dataType: int64
+		formatString: 0
+		lineageTag: 13e8735f-c664-41df-95ba-72a15628f5a2
+		summarizeBy: sum
+		sourceColumn: Visualiz. de clipes
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Visualizações de clipes em destaque'
+		dataType: int64
+		formatString: 0
+		lineageTag: ca20ae47-66e7-4c6c-92c0-de524ca15748
+		summarizeBy: sum
+		sourceColumn: Visualizações de clipes em destaque
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Visualizações de clipes sem destaque'
+		dataType: int64
+		formatString: 0
+		lineageTag: d3a43c0d-01b4-42a5-bfdd-3325336cbdb4
+		summarizeBy: sum
+		sourceColumn: Visualizações de clipes sem destaque
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Anúncios comerciais (minutos)'
+		dataType: double
+		formatString: 0
+		lineageTag: b4320014-8f72-4eb9-9f2b-c54face0accc
+		summarizeBy: sum
+		sourceColumn: Anúncios comerciais (minutos)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tempo de anúncios (em seg.) por hora'
+		dataType: double
+		formatString: 0
+		lineageTag: a0ddabb1-fa54-4396-960f-d9fd832b802b
+		summarizeBy: sum
+		sourceColumn: Tempo de anúncios (em seg.) por hora
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sub-receita
+		dataType: decimal
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: f90a6eeb-43bf-4a4e-a806-d1a61c16d64b
+		summarizeBy: sum
+		sourceColumn: Sub-receita
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column 'Renda com o Prime'
+		dataType: decimal
+		formatString: 0
+		lineageTag: 56ef2340-cf91-41c8-98c6-44081d9b8ae9
+		summarizeBy: sum
+		sourceColumn: Renda com o Prime
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Receita de inscrições de presente'
+		dataType: decimal
+		formatString: 0
+		lineageTag: 5ae2ecc9-e945-4222-a650-da3f15130a96
+		summarizeBy: sum
+		sourceColumn: Receita de inscrições de presente
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Receita de inscrições de presente de múltiplos meses'
+		dataType: decimal
+		formatString: 0
+		lineageTag: c3ca43e4-933b-428c-a16f-b0a83128a420
+		summarizeBy: sum
+		sourceColumn: Receita de inscrições de presente de múltiplos meses
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Receita de Bits'
+		dataType: decimal
+		formatString: 0
+		lineageTag: 539e878b-6388-43da-8ee9-efea0ae18fa9
+		summarizeBy: sum
+		sourceColumn: Receita de Bits
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Receita de anúncios'
+		dataType: decimal
+		formatString: 0
+		lineageTag: 96cf7f48-8852-453f-bac2-40928577af81
+		summarizeBy: sum
+		sourceColumn: Receita de anúncios
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Receita do Turbo'
+		dataType: decimal
+		formatString: 0
+		lineageTag: 2be77852-fae8-4e5c-addb-09134ff28b2c
+		summarizeBy: sum
+		sourceColumn: Receita do Turbo
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Receita das vendas de jogos'
+		dataType: decimal
+		formatString: 0
+		lineageTag: 3df0c618-3fb8-4898-94ea-b1e6c90e405d
+		summarizeBy: sum
+		sourceColumn: Receita das vendas de jogos
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Receita de extensões'
+		dataType: decimal
+		formatString: 0
+		lineageTag: 8a81c5d6-7b2c-495a-bbc8-9f5a21c56201
+		summarizeBy: sum
+		sourceColumn: Receita de extensões
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Receita de patrocínios'
+		dataType: decimal
+		formatString: 0
+		lineageTag: 53b95574-bc07-4ba2-90be-8c542c30a597
+		summarizeBy: sum
+		sourceColumn: Receita de patrocínios
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Receita de outras interações com Bits'
+		dataType: decimal
+		formatString: 0
+		lineageTag: 96dc0236-3150-4cf4-affb-573148ae1bf4
+		summarizeBy: sum
+		sourceColumn: Receita de outras interações com Bits
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Espectadores novos engajados'
+		dataType: int64
+		formatString: 0
+		lineageTag: 4ead7b9b-94f3-4715-9b59-0339f4e5b84d
+		summarizeBy: sum
+		sourceColumn: Espectadores novos engajados
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Espectadores recorrentes engajados'
+		dataType: int64
+		formatString: 0
+		lineageTag: 77519c22-d85a-4074-9488-b02c06fee227
+		summarizeBy: sum
+		sourceColumn: Espectadores recorrentes engajados
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Inscrições Prime'
+		dataType: int64
+		formatString: 0
+		lineageTag: d87875da-853a-4d58-bd7a-abcf758a54fa
+		summarizeBy: sum
+		sourceColumn: Inscrições Prime
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Total de inscrições pagas'
+		dataType: int64
+		formatString: 0
+		lineageTag: 2eb33ccf-570c-4d97-b6bc-469d1b1e5221
+		summarizeBy: sum
+		sourceColumn: Total de inscrições pagas
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Inscritos Grupo 1'
+		dataType: int64
+		formatString: 0
+		lineageTag: da6ffd45-d4aa-45dc-841a-162f758fd5f1
+		summarizeBy: sum
+		sourceColumn: Inscritos Grupo 1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Inscritos Grupo 2'
+		dataType: int64
+		formatString: 0
+		lineageTag: 06100b27-c149-4d24-87cd-fd5c1af7df60
+		summarizeBy: sum
+		sourceColumn: Inscritos Grupo 2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Inscritos Grupo 3'
+		dataType: int64
+		formatString: 0
+		lineageTag: 481642af-16cd-4eae-8cd8-55a90f32ab96
+		summarizeBy: sum
+		sourceColumn: Inscritos Grupo 3
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Total de inscrições de presente'
+		dataType: int64
+		formatString: 0
+		lineageTag: 27137e20-e43f-4312-a059-98368e2607eb
+		summarizeBy: sum
+		sourceColumn: Total de inscrições de presente
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Inscrições Grupo 1 de presente'
+		dataType: int64
+		formatString: 0
+		lineageTag: 9890887b-ee30-4f6e-ac6a-e0497d5b8dd4
+		summarizeBy: sum
+		sourceColumn: Inscrições Grupo 1 de presente
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Inscrições Grupo 2 de presente'
+		dataType: int64
+		formatString: 0
+		lineageTag: 2f2129fc-ce98-4473-a744-8650ceb90bae
+		summarizeBy: sum
+		sourceColumn: Inscrições Grupo 2 de presente
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Inscrições Grupo 3 de presente'
+		dataType: int64
+		formatString: 0
+		lineageTag: 19d414b8-7520-49c1-8a14-0dcf9c51c739
+		summarizeBy: sum
+		sourceColumn: Inscrições Grupo 3 de presente
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Total de inscrições de presente de múltiplos meses'
+		dataType: int64
+		formatString: 0
+		lineageTag: 31994ef2-d57a-4d92-9ac0-69b96f8ea358
+		summarizeBy: sum
+		sourceColumn: Total de inscrições de presente de múltiplos meses
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Inscrições de presente de múltiplos meses do Grupo 1'
+		dataType: int64
+		formatString: 0
+		lineageTag: 3c906d33-e510-4b36-829c-8f15c34c62d7
+		summarizeBy: sum
+		sourceColumn: Inscrições de presente de múltiplos meses do Grupo 1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Inscrições de presente de múltiplos meses do Grupo 2'
+		dataType: int64
+		formatString: 0
+		lineageTag: 5b567af7-580c-4b6e-af83-cd3fbad791d0
+		summarizeBy: sum
+		sourceColumn: Inscrições de presente de múltiplos meses do Grupo 2
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Inscrições de presente de múltiplos meses do Grupo 3'
+		dataType: int64
+		formatString: 0
+		lineageTag: 6578663b-cfb2-4593-b519-93dfd5bd7b87
+		summarizeBy: sum
+		sourceColumn: Inscrições de presente de múltiplos meses do Grupo 3
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Início da Semana'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: a496cfa7-379b-4107-a8ab-0db44b2a121e
+		summarizeBy: none
+		sourceColumn: Início da Semana
+
+		variation Variation
+			isDefault
+			relationship: e83f0f25-4a64-4890-9ee8-869bf0cf02a9
+			defaultHierarchy: LocalDateTable_65af2399-210b-452f-a2e1-1c3347babe78.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Fim da Semana'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 05b3dd66-d78d-484d-a8c6-27693bce7784
+		summarizeBy: none
+		sourceColumn: Fim da Semana
+
+		variation Variation
+			isDefault
+			relationship: ec7582f6-d7fd-4ecc-b630-4b7dd7862bcf
+			defaultHierarchy: LocalDateTable_60434e98-7ba2-48c8-bc0b-0cca928c76d8.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Semana
+		dataType: string
+		lineageTag: b67ccf01-3db5-472c-a34a-0db58abc5e30
+		summarizeBy: none
+		sourceColumn: Semana
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Minutos Assistidos Sem Comercial'
+		dataType: int64
+		formatString: 0
+		lineageTag: 21af579c-5f4e-4315-b29f-e631fbfa49ff
+		summarizeBy: sum
+		sourceColumn: Minutos Assistidos Sem Comercial
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Minutos Transmitidos (Dias)'
+		dataType: dateTime
+		formatString: Long Time
+		lineageTag: ab3bb9cd-592e-465e-ab88-c05e85078615
+		summarizeBy: none
+		sourceColumn: Minutos Transmitidos (Dias)
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Time
+
+	partition 'Analytics e receita por dia' = m
+		mode: import
+		source =
+				let
+				    Fonte = Csv.Document(File.Contents("C:\Users\Paulo\Documents\OneDrive - CENTRAL IT TECNOLOGIA DA INFORMAÇÃO LTDA\CSC\Dashs PBI\Analytics e receita por dia.csv"),[Delimiter=",", Columns=44, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+				    #"Tipo Alterado com Localidade" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos", {{"Data", type date}}, "pt-BR"),
+				    #"Início da Semana Inserido" = Table.AddColumn(#"Tipo Alterado com Localidade", "Início da Semana", each Date.StartOfWeek([Data]), type date),
+				    #"Fim da Semana Inserido" = Table.AddColumn(#"Início da Semana Inserido", "Fim da Semana", each Date.EndOfWeek([Data]), type date),
+				    #"Coluna Personalizada Adicionada" = Table.AddColumn(#"Fim da Semana Inserido", "Semana", each Text.Combine({Text.Start(Text.From([Início da Semana], "pt-BR"), 5), "-", Text.Start(Text.From([Fim da Semana], "pt-BR"), 5)}), type text),
+				    #"Valor Substituído" = Table.ReplaceValue(#"Coluna Personalizada Adicionada",".",",",Replacer.ReplaceText,{"Sub-receita"}),
+				    #"Valor Substituído1" = Table.ReplaceValue(#"Valor Substituído",".",",",Replacer.ReplaceText,{"Renda com o Prime"}),
+				    #"Valor Substituído2" = Table.ReplaceValue(#"Valor Substituído1",".",",",Replacer.ReplaceText,{"Receita de inscrições de presente"}),
+				    #"Valor Substituído3" = Table.ReplaceValue(#"Valor Substituído2",".",",",Replacer.ReplaceText,{"Receita de inscrições de presente de múltiplos meses"}),
+				    #"Valor Substituído4" = Table.ReplaceValue(#"Valor Substituído3",".",",",Replacer.ReplaceText,{"Receita de Bits"}),
+				    #"Valor Substituído5" = Table.ReplaceValue(#"Valor Substituído4",".",",",Replacer.ReplaceText,{"Receita de anúncios"}),
+				    #"Valor Substituído6" = Table.ReplaceValue(#"Valor Substituído5",".",",",Replacer.ReplaceText,{"Receita do Turbo"}),
+				    #"Valor Substituído7" = Table.ReplaceValue(#"Valor Substituído6",".",",",Replacer.ReplaceText,{"Receita das vendas de jogos"}),
+				    #"Valor Substituído8" = Table.ReplaceValue(#"Valor Substituído7",".",",",Replacer.ReplaceText,{"Receita de extensões"}),
+				    #"Valor Substituído9" = Table.ReplaceValue(#"Valor Substituído8",".",",",Replacer.ReplaceText,{"Receita de patrocínios"}),
+				    #"Valor Substituído10" = Table.ReplaceValue(#"Valor Substituído9",".",",",Replacer.ReplaceText,{"Receita de outras interações com Bits"}),
+				    #"Valor Substituído11" = Table.ReplaceValue(#"Valor Substituído10",".",",",Replacer.ReplaceText,{"Média de espectadores"}),
+				    #"Valor Substituído12" = Table.ReplaceValue(#"Valor Substituído11",".",",",Replacer.ReplaceText,{"Anúncios comerciais (minutos)"}),
+				    #"Valor Substituído13" = Table.ReplaceValue(#"Valor Substituído12",".",",",Replacer.ReplaceText,{"Tempo de anúncios (em seg.) por hora"}),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Valor Substituído13",{{"Média de espectadores", type number}, {"Seguidores", Int64.Type}, {"Minutos transmitidos", Int64.Type}, {"Minutos assistidos", Int64.Type}, {"Visualiz. ao vivo", Int64.Type}, {"Máximo de espectadores", Int64.Type}, {"Espectadores únicos", Int64.Type}, {"Espectadores engajados", Int64.Type}, {"Espectadores de hospedagem e raids (%)", Int64.Type}, {"Participantes do chat", Int64.Type}, {"Mensagens do chat", Int64.Type}, {"Clipes criados", Int64.Type}, {"Visualiz. de clipes", Int64.Type}, {"Visualizações de clipes em destaque", Int64.Type}, {"Visualizações de clipes sem destaque", Int64.Type}, {"Anúncios comerciais (minutos)", type number}, {"Tempo de anúncios (em seg.) por hora", type number}, {"Sub-receita", Currency.Type}, {"Renda com o Prime", Currency.Type}, {"Receita de inscrições de presente", Currency.Type}, {"Receita de inscrições de presente de múltiplos meses", Currency.Type}, {"Receita de Bits", Currency.Type}, {"Receita de anúncios", Currency.Type}, {"Receita do Turbo", Currency.Type}, {"Receita das vendas de jogos", Currency.Type}, {"Receita de extensões", Currency.Type}, {"Receita de patrocínios", Currency.Type}, {"Receita de outras interações com Bits", Currency.Type}, {"Espectadores novos engajados", Int64.Type}, {"Espectadores recorrentes engajados", Int64.Type}, {"Inscrições Prime", Int64.Type}, {"Total de inscrições pagas", Int64.Type}, {"Inscritos Grupo 1", Int64.Type}, {"Inscritos Grupo 2", Int64.Type}, {"Inscritos Grupo 3", Int64.Type}, {"Total de inscrições de presente", Int64.Type}, {"Inscrições Grupo 1 de presente", Int64.Type}, {"Inscrições Grupo 2 de presente", Int64.Type}, {"Inscrições Grupo 3 de presente", Int64.Type}, {"Total de inscrições de presente de múltiplos meses", Int64.Type}, {"Inscrições de presente de múltiplos meses do Grupo 1", Int64.Type}, {"Inscrições de presente de múltiplos meses do Grupo 2", Int64.Type}, {"Inscrições de presente de múltiplos meses do Grupo 3", Int64.Type}}),
+				    #"Personalização Adicionada" = Table.AddColumn(#"Tipo Alterado", "Minutos Assistidos Sem Comercial", each [Minutos assistidos] - [#"Anúncios comerciais (minutos)"]),
+				    #"Colunas Reordenadas" = Table.ReorderColumns(#"Personalização Adicionada",{"Data", "Semana", "Início da Semana", "Fim da Semana", "Média de espectadores", "Seguidores", "Minutos transmitidos", "Minutos assistidos", "Minutos Assistidos Sem Comercial", "Visualiz. ao vivo", "Máximo de espectadores", "Espectadores únicos", "Espectadores engajados", "Espectadores de hospedagem e raids (%)", "Participantes do chat", "Mensagens do chat", "Clipes criados", "Visualiz. de clipes", "Visualizações de clipes em destaque", "Visualizações de clipes sem destaque", "Anúncios comerciais (minutos)", "Tempo de anúncios (em seg.) por hora", "Sub-receita", "Renda com o Prime", "Receita de inscrições de presente", "Receita de inscrições de presente de múltiplos meses", "Receita de Bits", "Receita de anúncios", "Receita do Turbo", "Receita das vendas de jogos", "Receita de extensões", "Receita de patrocínios", "Receita de outras interações com Bits", "Espectadores novos engajados", "Espectadores recorrentes engajados", "Inscrições Prime", "Total de inscrições pagas", "Inscritos Grupo 1", "Inscritos Grupo 2", "Inscritos Grupo 3", "Total de inscrições de presente", "Inscrições Grupo 1 de presente", "Inscrições Grupo 2 de presente", "Inscrições Grupo 3 de presente", "Total de inscrições de presente de múltiplos meses", "Inscrições de presente de múltiplos meses do Grupo 1", "Inscrições de presente de múltiplos meses do Grupo 2", "Inscrições de presente de múltiplos meses do Grupo 3"}),
+				    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Colunas Reordenadas",{{"Minutos Assistidos Sem Comercial", Int64.Type}, {"Minutos transmitidos", Int64.Type}}),
+				    #"Linhas Classificadas" = Table.Sort(#"Tipo Alterado1",{{"Minutos transmitidos", Order.Descending}}),
+				    #"Personalização Adicionada1" = Table.AddColumn(#"Linhas Classificadas", "Minutos Transmitidos (Dias)", each [Minutos transmitidos]/1440),
+				    #"Tipo Alterado2" = Table.TransformColumnTypes(#"Personalização Adicionada1",{{"Minutos Transmitidos (Dias)", type duration}})
+				in
+				    #"Tipo Alterado2"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegação
+

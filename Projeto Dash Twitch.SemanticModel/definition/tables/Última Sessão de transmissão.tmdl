@@ -1,0 +1,163 @@
+table 'Última Sessão de transmissão'
+	lineageTag: 9391c513-f4b5-426c-a9f9-26744f2cdb18
+
+	column 'Marcação de tempo'
+		dataType: dateTime
+		formatString: Long Time
+		lineageTag: 20be1715-4d97-444b-b40e-85163c70c729
+		summarizeBy: none
+		sourceColumn: Marcação de tempo
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Time
+
+	column 'Média de espectadores'
+		dataType: int64
+		formatString: 0
+		lineageTag: aaca93f9-35bb-4ad0-b94a-1f0f2d384c6e
+		summarizeBy: sum
+		sourceColumn: Média de espectadores
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Visualiz. ao vivo'
+		dataType: int64
+		formatString: 0
+		lineageTag: 80a0d3f2-9979-46d3-8859-88fe5276cf53
+		summarizeBy: sum
+		sourceColumn: Visualiz. ao vivo
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Novos seguidores'
+		dataType: int64
+		formatString: 0
+		lineageTag: 5b86938b-50a2-41c4-92e2-4570d0e40792
+		summarizeBy: sum
+		sourceColumn: Novos seguidores
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Part. do chat'
+		dataType: int64
+		formatString: 0
+		lineageTag: ea813b7e-74e4-4f99-827d-a530a8fb82c1
+		summarizeBy: sum
+		sourceColumn: Part. do chat
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Mensagens do chat'
+		dataType: int64
+		formatString: 0
+		lineageTag: 534c4920-79fb-4201-8de0-db52ff5e586a
+		summarizeBy: sum
+		sourceColumn: Mensagens do chat
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Anúncios comerciais'
+		dataType: int64
+		formatString: 0
+		lineageTag: 5ad3aa5d-6a49-4368-864a-f49fc6cfe623
+		summarizeBy: sum
+		sourceColumn: Anúncios comerciais
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Novas inscrições'
+		dataType: int64
+		formatString: 0
+		lineageTag: b43927e5-0a32-4dc4-977a-4fabb2973cf4
+		summarizeBy: sum
+		sourceColumn: Novas inscrições
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Clipes criados'
+		dataType: int64
+		formatString: 0
+		lineageTag: 332b0ec4-c272-4729-89cf-7a35c1811a32
+		summarizeBy: sum
+		sourceColumn: Clipes criados
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Visualiz. de clipes'
+		dataType: int64
+		formatString: 0
+		lineageTag: c9fd4220-6a43-4053-897b-aaefbdf6acae
+		summarizeBy: sum
+		sourceColumn: Visualiz. de clipes
+
+		annotation SummarizationSetBy = Automatic
+
+	column Data
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 8f007d6d-1b22-4b10-b9e9-1646f37be391
+		summarizeBy: none
+		sourceColumn: Data
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Column1
+		dataType: string
+		lineageTag: b015fa94-1cfd-4b40-915b-8d6add81ef37
+		summarizeBy: none
+		sourceColumn: Column1
+
+		annotation SummarizationSetBy = Automatic
+
+	column _1
+		dataType: string
+		lineageTag: a5d9c014-d26f-489b-8e63-a9845d66ab0c
+		summarizeBy: none
+		sourceColumn: _1
+
+		annotation SummarizationSetBy = Automatic
+
+	column _2
+		dataType: string
+		lineageTag: f9aa1516-1acd-46b6-b33c-bd40f2ec9202
+		summarizeBy: none
+		sourceColumn: _2
+
+		annotation SummarizationSetBy = Automatic
+
+	column _3
+		dataType: string
+		lineageTag: d52703c5-fc05-48dd-b3d7-f52da2cddc39
+		summarizeBy: none
+		sourceColumn: _3
+
+		annotation SummarizationSetBy = Automatic
+
+	column _4
+		dataType: string
+		lineageTag: 76c7a9fa-da32-41ca-996c-4e744f3d2516
+		summarizeBy: none
+		sourceColumn: _4
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Última Sessão de transmissão' = m
+		mode: import
+		source =
+				let
+				    Fonte = Csv.Document(File.Contents("C:\Users\Paulo\Documents\OneDrive - CENTRAL IT TECNOLOGIA DA INFORMAÇÃO LTDA\CSC\Dashs PBI\Última Sessão de transmissão.csv"),[Delimiter=",", Columns=15, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"Marcação de tempo", type time}, {"Média de espectadores", Int64.Type}, {"Visualiz. ao vivo", Int64.Type}, {"Novos seguidores", Int64.Type}, {"Part. do chat", Int64.Type}, {"Mensagens do chat", Int64.Type}, {"Anúncios comerciais", Int64.Type}, {"Novas inscrições", Int64.Type}, {"Clipes criados", Int64.Type}, {"Visualiz. de clipes", Int64.Type}}),
+				    #"Consulta Acrescentada" = Table.Combine({#"Tipo Alterado", #"Última Data"}),
+				    #"Preenchido Acima" = Table.FillUp(#"Consulta Acrescentada",{"Data"}),
+				    #"Linhas Inferiores Removidas" = Table.RemoveLastN(#"Preenchido Acima",1)
+				in
+				    #"Linhas Inferiores Removidas"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegação
+

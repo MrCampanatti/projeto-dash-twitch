@@ -1,0 +1,28 @@
+model Model
+	culture: pt-BR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: pt-BR
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["Analytics e receita por dia","Última Sessão de transmissão","Medidas","Última Data"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.129.1229.0 (24.05)
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table 'Analytics e receita por dia'
+ref table DateTableTemplate_dd02d5a5-b6ef-4650-818d-bfef3ad81130
+ref table LocalDateTable_7dce351b-dcfe-4592-b436-ffc80d375be7
+ref table 'Última Sessão de transmissão'
+ref table Medidas
+ref table LocalDateTable_65af2399-210b-452f-a2e1-1c3347babe78
+ref table LocalDateTable_60434e98-7ba2-48c8-bc0b-0cca928c76d8
+ref table 'Última Data'
+ref table LocalDateTable_5dc723c2-cee8-4c79-a298-f1db27b43af1
+
+ref cultureInfo pt-BR
+

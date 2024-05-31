@@ -1,0 +1,25 @@
+relationship e24318f0-a2e8-42df-a157-9b90d1f6068c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Analytics e receita por dia'.Data
+	toColumn: LocalDateTable_7dce351b-dcfe-4592-b436-ffc80d375be7.Date
+
+relationship e83f0f25-4a64-4890-9ee8-869bf0cf02a9
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Analytics e receita por dia'.'Início da Semana'
+	toColumn: LocalDateTable_65af2399-210b-452f-a2e1-1c3347babe78.Date
+
+relationship ec7582f6-d7fd-4ecc-b630-4b7dd7862bcf
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Analytics e receita por dia'.'Fim da Semana'
+	toColumn: LocalDateTable_60434e98-7ba2-48c8-bc0b-0cca928c76d8.Date
+
+relationship d0c88e64-8f66-476c-b79d-6f36172bd8ff
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Última Data'.Data
+	toColumn: LocalDateTable_5dc723c2-cee8-4c79-a298-f1db27b43af1.Date
+
+relationship d648fa6e-af7a-4aae-b9cd-6bf7375f8253
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'Última Sessão de transmissão'.Data
+	toColumn: 'Analytics e receita por dia'.Data
+

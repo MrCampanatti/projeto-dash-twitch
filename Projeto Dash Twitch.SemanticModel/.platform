@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Projeto Dash Twitch"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "db464c43-840f-4180-bf7f-e44618db7bb0"
+  }
+}

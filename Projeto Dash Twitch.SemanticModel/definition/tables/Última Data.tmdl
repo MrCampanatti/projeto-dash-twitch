@@ -1,0 +1,34 @@
+table 'Última Data'
+	lineageTag: dffc74f4-4f88-401b-811c-820f4cafab11
+
+	column Data
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: b7217ebe-cce3-47b2-ac01-97ebfc9b5a4a
+		summarizeBy: none
+		sourceColumn: Data
+
+		variation Variation
+			isDefault
+			relationship: d0c88e64-8f66-476c-b79d-6f36172bd8ff
+			defaultHierarchy: LocalDateTable_5dc723c2-cee8-4c79-a298-f1db27b43af1.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition 'Última Data' = m
+		mode: import
+		source =
+				let
+				    Fonte = List.Max(#"Analytics e receita por dia"[Data]),
+				    #"Convertido para Tabela" = #table(1, {{Fonte}}),
+				    #"Colunas Renomeadas" = Table.RenameColumns(#"Convertido para Tabela",{{"Column1", "Data"}}),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Colunas Renomeadas",{{"Data", type date}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegação
+

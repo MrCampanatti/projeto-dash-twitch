@@ -1,0 +1,198 @@
+table Medidas
+	lineageTag: 2e5d6803-f3cf-4ed5-9805-b39b2e28a478
+
+	measure 'Total Clipes Criados' = SUM('Analytics e receita por dia'[Clipes criados])
+		formatString: 0
+		lineageTag: ab29703e-fe26-49e5-a148-e976feee1eb9
+
+	measure 'Média do Tempo de Anúncios por hora Transmitida' =
+			VAR result = AVERAGE('Analytics e receita por dia'[Tempo de anúncios (em seg.) por hora])
+			 VAR hh = IF(LEN(ROUNDDOWN(result/3600,0))=1,"0"&ROUNDDOWN(result/3600,0),ROUNDDOWN(result/3600,0))
+			 VAR mm =IF(LEN(ROUNDDOWN((result - (hh*3600)) / 60,0))=1,"0"&ROUNDDOWN((result - (hh*3600)) / 60,0),ROUNDDOWN((result - (hh*3600)) / 60,0))
+			 VAR ss = IF(LEN(MOD(result - (hh*3600),60))=1,"0"&MOD(result - (hh*3600),60),MOD(result - (hh*3600),60))
+			 RETURN IF(hh&":"&mm&":"&ROUND(ss,0) = "::",BLANK(),hh&":"&mm&":"& IF(LEN(ROUNDDOWN(ss,0))=1,"0"&ROUNDDOWN(ss,0),ROUNDDOWN(ss,0)))
+		lineageTag: b5761ab9-8583-4bb1-8439-2d25a8d83d1e
+
+	measure 'Espectadores Engajados' = SUM('Analytics e receita por dia'[Espectadores engajados])
+		formatString: 0
+		lineageTag: c75d69f2-c5b5-4478-85ff-58c3fac867db
+
+	measure Espectadores = SUM('Analytics e receita por dia'[Espectadores únicos])
+		formatString: 0
+		lineageTag: 46dec7f7-6c6c-4b9a-9441-41bf40577330
+
+	measure 'Média de Espectadores' = SUM('Analytics e receita por dia'[Média de espectadores])
+		lineageTag: cdbc7fda-00cc-4df5-a519-da5a74d17582
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Novos Seguidores' = SUM('Analytics e receita por dia'[Seguidores])
+		formatString: 0
+		lineageTag: da3fa250-f947-4e05-b21b-b1c623d38cf9
+
+	measure 'Máximo Viewers Simultâneos' = SUM('Analytics e receita por dia'[Máximo de espectadores])
+		formatString: 0
+		lineageTag: eb39ce51-560e-4529-8b3c-3b5d9bf4d91b
+
+	measure 'Novas Inscrições' = SUM('Analytics e receita por dia'[Total de inscrições pagas])
+		formatString: 0
+		lineageTag: 613f91ca-cf29-4a6b-b423-68ddfaaeeb55
+
+	measure 'Novas Inscrições de Presente' = SUMX('Analytics e receita por dia', 'Analytics e receita por dia'[Total de inscrições de presente] + 'Analytics e receita por dia'[Total de inscrições de presente de múltiplos meses])
+		formatString: 0
+		lineageTag: 4632f36e-3e59-4d60-8873-fb05435a7511
+
+	measure Receita = SUMX('Analytics e receita por dia', 'Analytics e receita por dia'[Receita das vendas de jogos] + 'Analytics e receita por dia'[Receita de anúncios] + 'Analytics e receita por dia'[Receita de Bits] + 'Analytics e receita por dia'[Receita de extensões] + 'Analytics e receita por dia'[Receita de inscrições de presente de múltiplos meses] + 'Analytics e receita por dia'[Receita de inscrições de presente] + 'Analytics e receita por dia'[Receita de outras interações com Bits] + 'Analytics e receita por dia'[Receita de patrocínios] + 'Analytics e receita por dia'[Receita do Turbo] + 'Analytics e receita por dia'[Renda com o Prime] + 'Analytics e receita por dia'[Sub-receita])
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 9d99cec6-34d4-4782-8469-080db9f11f64
+
+	measure 'Tempo Transmitido' =
+			VAR result = SUM('Analytics e receita por dia'[Minutos transmitidos])*60
+			 VAR hh = IF(LEN(ROUNDDOWN(result/3600,0))=1,"0"&ROUNDDOWN(result/3600,0),ROUNDDOWN(result/3600,0))
+			 VAR mm =IF(LEN(ROUNDDOWN((result - (hh*3600)) / 60,0))=1,"0"&ROUNDDOWN((result - (hh*3600)) / 60,0),ROUNDDOWN((result - (hh*3600)) / 60,0))
+			 VAR ss = IF(LEN(MOD(result - (hh*3600),60))=1,"0"&MOD(result - (hh*3600),60),MOD(result - (hh*3600),60))
+			 RETURN IF(hh&":"&mm&":"&ROUND(ss,0) = "::",BLANK(),hh&":"&mm&":"& IF(LEN(ROUNDDOWN(ss,0))=1,"0"&ROUNDDOWN(ss,0),ROUNDDOWN(ss,0)))
+		lineageTag: d781dfdc-1846-4714-9330-67be40ed9cbf
+
+	measure 'Tempo Assistido' =
+			VAR result = SUM('Analytics e receita por dia'[Minutos assistidos])*60
+			 VAR hh = IF(LEN(ROUNDDOWN(result/3600,0))=1,"0"&ROUNDDOWN(result/3600,0),ROUNDDOWN(result/3600,0))
+			 VAR mm =IF(LEN(ROUNDDOWN((result - (hh*3600)) / 60,0))=1,"0"&ROUNDDOWN((result - (hh*3600)) / 60,0),ROUNDDOWN((result - (hh*3600)) / 60,0))
+			 VAR ss = IF(LEN(MOD(result - (hh*3600),60))=1,"0"&MOD(result - (hh*3600),60),MOD(result - (hh*3600),60))
+			 RETURN IF(hh&":"&mm&":"&ROUND(ss,0) = "::",BLANK(),hh&":"&mm&":"& IF(LEN(ROUNDDOWN(ss,0))=1,"0"&ROUNDDOWN(ss,0),ROUNDDOWN(ss,0)))
+		lineageTag: 07050f46-158a-4117-94b4-acd091c88678
+
+	measure 'Novas Inscrições (Todas)' = SUMX('Analytics e receita por dia', 'Analytics e receita por dia'[Inscrições Prime] + 'Analytics e receita por dia'[Total de inscrições pagas] + 'Analytics e receita por dia'[Total de inscrições de presente] + 'Analytics e receita por dia'[Total de inscrições de presente de múltiplos meses])
+		formatString: 0
+		lineageTag: a343415e-a069-4288-bfa8-871e700c0174
+
+	measure 'Novas Inscrições Prime' = SUM('Analytics e receita por dia'[Inscrições Prime])
+		formatString: 0
+		lineageTag: b4a74bd4-472f-4cdd-a406-c5cc13d9e289
+
+	measure 'MIN Duração da Transmissão' = MIN('Última Sessão de transmissão'[Marcação de tempo])
+		formatString: hh:nn
+		lineageTag: f9bc7523-1c1c-4e36-b1a4-b2c1262e8dee
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	measure 'MAX Duração da Transmissão' = MAX('Última Sessão de transmissão'[Marcação de tempo])
+		formatString: hh:nn
+		lineageTag: 9a359510-7707-40ac-b917-4e366bb00eca
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	measure Duração = CALCULATE(SUM('Analytics e receita por dia'[Minutos transmitidos]), 'Última Sessão de transmissão'[Data])
+		formatString: 0.00
+		lineageTag: 5de3adbc-f158-44da-8823-2e28d2308a94
+
+	measure 'Duração da Transmissão' = ```
+			
+			 VAR result = ([Duração]*60)
+			 VAR hh = IF(LEN(ROUNDDOWN(result/3600,0))=1,"0"&ROUNDDOWN(result/3600,0),ROUNDDOWN(result/3600,0))
+			 VAR mm =IF(LEN(ROUNDDOWN((result - (hh*3600)) / 60,0))=1,"0"&ROUNDDOWN((result - (hh*3600)) / 60,0),ROUNDDOWN((result - (hh*3600)) / 60,0))
+			 VAR ss = IF(LEN(MOD(result - (hh*3600),60))=1,"0"&MOD(result - (hh*3600),60),MOD(result - (hh*3600),60))
+			 RETURN IF(hh&":"&mm&":"&ROUND(ss,0) = "::",BLANK(),hh&":"&mm&":"& IF(LEN(ROUNDDOWN(ss,0))=1,"0"&ROUNDDOWN(ss,0),ROUNDDOWN(ss,0)))
+			```
+		lineageTag: 0d11e826-1318-4feb-a4e7-132091a9111f
+
+	measure 'Total de Mensagens do Chat' = ```
+			SUM('Analytics e receita por dia'[Mensagens do chat]) 
+			```
+		formatString: 0
+		lineageTag: 0cee87c9-5282-49bd-88d3-c05c3bfe3304
+
+	measure 'Tempo Transmitido de Anúncios' =
+			VAR result = SUM('Analytics e receita por dia'[Anúncios comerciais (minutos)])*60
+			 VAR hh = IF(LEN(ROUNDDOWN(result/3600,0))=1,"0"&ROUNDDOWN(result/3600,0),ROUNDDOWN(result/3600,0))
+			 VAR mm =IF(LEN(ROUNDDOWN((result - (hh*3600)) / 60,0))=1,"0"&ROUNDDOWN((result - (hh*3600)) / 60,0),ROUNDDOWN((result - (hh*3600)) / 60,0))
+			 VAR ss = IF(LEN(MOD(result - (hh*3600),60))=1,"0"&MOD(result - (hh*3600),60),MOD(result - (hh*3600),60))
+			 RETURN IF(hh&":"&mm&":"&ROUND(ss,0) = "::",BLANK(),hh&":"&mm&":"& IF(LEN(ROUNDDOWN(ss,0))=1,"0"&ROUNDDOWN(ss,0),ROUNDDOWN(ss,0)))
+		lineageTag: 11f472bb-1201-47c6-947f-3715b731f19f
+
+	measure 'Receita Sub Prime' = SUM('Analytics e receita por dia'[Renda com o Prime])
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: 982cbe42-e8dd-4b80-a107-8a1bdce0aea6
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Receita Anúncios' = SUM('Analytics e receita por dia'[Receita de anúncios])
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: b23eec4e-051a-4d5f-b9c3-4f50af5e9e50
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Receita Inscrições Pagas' = SUM('Analytics e receita por dia'[Sub-receita])
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: e8b38203-4983-4a2f-a335-b1957b1f40c3
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'Receita Bits' = SUM('Analytics e receita por dia'[Receita de Bits])
+		formatString: "R$"\ #,0.###############;-"R$"\ #,0.###############;"R$"\ #,0.###############
+		lineageTag: 91450fd9-c1a9-44d3-ae9d-9d675ac552d6
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure 'Receita Patrocínios' = SUM('Analytics e receita por dia'[Receita de patrocínios])
+		formatString: "R$"\ #,0.###############;-"R$"\ #,0.###############;"R$"\ #,0.###############
+		lineageTag: 2ab5bf94-5f55-4f74-8bdd-6bcdd4918ea5
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure 'Média de Espectadores Última Transmissão' = MAX('Última Sessão de transmissão'[Visualiz. ao vivo])
+		formatString: 0
+		lineageTag: b5893501-8bde-4af0-aa36-98576869dd0d
+
+	measure 'Visualiz. ao vivo na Última Transmissão' = SUM('Última Sessão de transmissão'[Visualiz. ao vivo])
+		formatString: 0
+		lineageTag: 78b2be1c-4312-4a95-9df3-59c890cdc5f6
+
+	measure 'Total de Mensagens do Chat da Última Transmissão' = SUM('Última Sessão de transmissão'[Mensagens do chat])
+		formatString: 0
+		lineageTag: df07db47-1123-4b02-a2a5-723039d1666c
+
+	measure 'Duração Total dos Anúncios na Última Transmissão' =
+			VAR result = SUM('Última Sessão de transmissão'[Anúncios comerciais])
+			 VAR hh = IF(LEN(ROUNDDOWN(result/3600,0))=1,"0"&ROUNDDOWN(result/3600,0),ROUNDDOWN(result/3600,0))
+			 VAR mm =IF(LEN(ROUNDDOWN((result - (hh*3600)) / 60,0))=1,"0"&ROUNDDOWN((result - (hh*3600)) / 60,0),ROUNDDOWN((result - (hh*3600)) / 60,0))
+			 VAR ss = IF(LEN(MOD(result - (hh*3600),60))=1,"0"&MOD(result - (hh*3600),60),MOD(result - (hh*3600),60))
+			 RETURN IF(hh&":"&mm&":"&ROUND(ss,0) = "::",BLANK(),hh&":"&mm&":"& IF(LEN(ROUNDDOWN(ss,0))=1,"0"&ROUNDDOWN(ss,0),ROUNDDOWN(ss,0)))
+		lineageTag: 1c4a3e80-86d8-445a-8349-cdc8997fcbf7
+
+	measure 'Clipes Criados' = SUM('Última Sessão de transmissão'[Clipes criados])
+		formatString: 0
+		lineageTag: aef128ab-1815-4ade-a6d0-f48a96e4f7a7
+
+	measure 'Seguidores na Última Transmissão' = SUM('Última Sessão de transmissão'[Novos seguidores])
+		formatString: 0
+		lineageTag: 0ab6d1fa-bfc4-434d-a576-379ec891a3bc
+
+	measure 'Percentual de Engajamento' = [Espectadores Engajados]/[Espectadores]
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: abdac104-91f6-405b-ae06-2dae9a75883d
+
+	measure 'Receita Inscrições de Presente' = SUM('Analytics e receita por dia'[Receita de inscrições de presente]) + SUM('Analytics e receita por dia'[Receita de inscrições de presente de múltiplos meses])
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: ebc4e2ca-f0f6-4027-b474-3f4d35df1de5
+
+	measure 'Máximo de Espectadores Última Transmissão' = MAX('Última Sessão de transmissão'[Média de espectadores])
+		formatString: 0
+		lineageTag: 7ae77733-ff60-4491-a221-c0ff7404eb7f
+
+	measure 'Novas Inscrições na Última Transmissão' = SUM('Última Sessão de transmissão'[Novas inscrições])
+		formatString: 0
+		lineageTag: 193fbf50-2c82-4df1-b750-ddefbd46d349
+
+	partition Medidas = m
+		mode: import
+		source =
+				let
+				    Fonte = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#"Coluna 1" = _t]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(Fonte,{{"Coluna 1", type text}}),
+				    #"Colunas Removidas" = Table.RemoveColumns(#"Tipo Alterado",{"Coluna 1"})
+				in
+				    #"Colunas Removidas"
+
+	annotation PBI_ResultType = Table
+

@@ -1,5 +1,5 @@
 {
-  "config": "{\"version\":\"5.54\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY23SU11\",\"version\":\"5.50\",\"type\":2},\"customTheme\":{\"name\":\"Custom3005518322629932.json\",\"version\":\"5.53\",\"type\":1}},\"activeSectionIndex\":2,\"defaultDrillFilterOtherVisuals\":true,\"slowDataSourceSettings\":{\"isCrossHighlightingDisabled\":false,\"isSlicerSelectionsButtonEnabled\":false,\"isFilterSelectionsButtonEnabled\":false,\"isFieldWellButtonEnabled\":false,\"isApplyAllButtonEnabled\":false},\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true,\"useEnhancedTooltips\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "config": "{\"version\":\"5.54\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY23SU11\",\"version\":\"5.50\",\"type\":2},\"customTheme\":{\"name\":\"Custom3005518322629932.json\",\"version\":\"5.53\",\"type\":1}},\"activeSectionIndex\":1,\"defaultDrillFilterOtherVisuals\":true,\"slowDataSourceSettings\":{\"isCrossHighlightingDisabled\":false,\"isSlicerSelectionsButtonEnabled\":false,\"isFilterSelectionsButtonEnabled\":false,\"isFieldWellButtonEnabled\":false,\"isApplyAllButtonEnabled\":false},\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true,\"useEnhancedTooltips\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
   "layoutOptimization": 0,
   "publicCustomVisuals": [
     "stratadatimelineProDB508FD14E2E41D2B5A5522CC05312AELAPIsss"
@@ -97,6 +97,11 @@
           {
             "name": "PReceita04213434566467744.png",
             "path": "PReceita04213434566467744.png",
+            "type": 100
+          },
+          {
+            "name": "PUltTransmissao2472592351757117.png",
+            "path": "PUltTransmissao2472592351757117.png",
             "type": 100
           },
           {
@@ -400,12 +405,12 @@
           "z": 9000.00
         },
         {
-          "config": "{\"name\":\"5a1aa2ffb207065465ac\",\"layouts\":[{\"id\":0,\"position\":{\"x\":50.926829268292686,\"y\":183.51219512195124,\"z\":15000,\"width\":64.09756097560975,\"height\":59.707317073170735,\"tabOrder\":15000}}],\"singleVisual\":{\"visualType\":\"actionButton\",\"drillFilterOtherVisuals\":true,\"objects\":{\"icon\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'custom'\"}}},\"image\":{\"image\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'ICONE_LIVES_BRANCO.png'\"}}},\"url\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"ICONE_LIVES_BRANCO20858804022216826.png\"}}},\"scaling\":{\"expr\":{\"Literal\":{\"Value\":\"'Normal'\"}}}}}},\"selector\":{\"id\":\"default\"}},{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}},{\"properties\":{\"image\":{\"image\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'ICONE_LIVES.png'\"}}},\"url\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"ICONE_LIVES47180035075135907.png\"}}},\"scaling\":{\"expr\":{\"Literal\":{\"Value\":\"'Normal'\"}}}}}},\"selector\":{\"id\":\"hover\"}}],\"outline\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"fill\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}},{\"properties\":{\"fillColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#A444FE'\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"100D\"}}}},\"selector\":{\"id\":\"hover\"}}],\"shape\":[{\"properties\":{\"roundEdge\":{\"expr\":{\"Literal\":{\"Value\":\"20L\"}}}},\"selector\":{\"id\":\"default\"}}]},\"vcObjects\":{\"visualLink\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'PageNavigation'\"}}},\"navigationSection\":{\"expr\":{\"Literal\":{\"Value\":\"''\"}}},\"tooltip\":{\"expr\":{\"Literal\":{\"Value\":\"'Clique aqui para ir as Lives'\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "config": "{\"name\":\"5a1aa2ffb207065465ac\",\"layouts\":[{\"id\":0,\"position\":{\"x\":50.926829268292686,\"y\":185.26829268292684,\"z\":15000,\"width\":64.09756097560975,\"height\":59.707317073170735,\"tabOrder\":15000}}],\"singleVisual\":{\"visualType\":\"actionButton\",\"drillFilterOtherVisuals\":true,\"objects\":{\"icon\":[{\"properties\":{\"shapeType\":{\"expr\":{\"Literal\":{\"Value\":\"'custom'\"}}},\"image\":{\"image\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'ICONE_LIVES_BRANCO.png'\"}}},\"url\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"ICONE_LIVES_BRANCO20858804022216826.png\"}}},\"scaling\":{\"expr\":{\"Literal\":{\"Value\":\"'Normal'\"}}}}}},\"selector\":{\"id\":\"default\"}},{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}},{\"properties\":{\"image\":{\"image\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'ICONE_LIVES.png'\"}}},\"url\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"ICONE_LIVES47180035075135907.png\"}}},\"scaling\":{\"expr\":{\"Literal\":{\"Value\":\"'Normal'\"}}}}}},\"selector\":{\"id\":\"hover\"}}],\"outline\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"fill\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}},{\"properties\":{\"fillColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#A444FE'\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"100D\"}}}},\"selector\":{\"id\":\"hover\"}}],\"shape\":[{\"properties\":{\"roundEdge\":{\"expr\":{\"Literal\":{\"Value\":\"20L\"}}}},\"selector\":{\"id\":\"default\"}}]},\"vcObjects\":{\"visualLink\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'PageNavigation'\"}}},\"navigationSection\":{\"expr\":{\"Literal\":{\"Value\":\"''\"}}},\"tooltip\":{\"expr\":{\"Literal\":{\"Value\":\"'Clique aqui para ir as Lives'\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
           "filters": "[]",
           "height": 59.71,
           "width": 64.10,
           "x": 50.93,
-          "y": 183.51,
+          "y": 185.27,
           "z": 15000.00
         },
         {
@@ -511,93 +516,111 @@
       "ordinal": 3,
       "visualContainers": [
         {
-          "config": "{\"name\":\"13efc9e438f72694f706\",\"layouts\":[{\"id\":0,\"position\":{\"x\":358.3218916857361,\"y\":201,\"width\":329.0312738367659,\"height\":177,\"z\":8000,\"tabOrder\":8000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Medidas.Novas Inscrições na Última Transmissão\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Novas Inscrições na Última Transmissão\"},\"Name\":\"Medidas.Novas Inscrições na Última Transmissão\",\"NativeReferenceName\":\"Novas Inscrições na Última Transmissão\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Novas Inscrições na Última Transmissão\"}}}]},\"autoSelectVisualType\":false,\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "config": "{\"name\":\"13efc9e438f72694f706\",\"layouts\":[{\"id\":0,\"position\":{\"x\":358.3218916857361,\"y\":201,\"width\":329.0312738367659,\"height\":177,\"z\":9000,\"tabOrder\":8000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Medidas.Novas Inscrições na Última Transmissão\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Novas Inscrições na Última Transmissão\"},\"Name\":\"Medidas.Novas Inscrições na Última Transmissão\",\"NativeReferenceName\":\"Novas Inscrições na Última Transmissão\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Novas Inscrições na Última Transmissão\"}}}]},\"autoSelectVisualType\":false,\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
           "height": 177.00,
           "width": 329.03,
           "x": 358.32,
           "y": 201.00,
-          "z": 8000.00
+          "z": 9000.00
         },
         {
-          "config": "{\"name\":\"39b8c13b0ac6894ce019\",\"layouts\":[{\"id\":0,\"position\":{\"x\":358.3218916857361,\"y\":17.57437070938215,\"z\":1000,\"width\":329.0312738367658,\"height\":168.90922959572845,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Medidas.Média de Espectadores Última Transmissão\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Média de Espectadores Última Transmissão\"},\"Name\":\"Medidas.Média de Espectadores Última Transmissão\",\"NativeReferenceName\":\"Média de Espectadores Última Transmissão\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Média de Espectadores Última Transmissão\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "config": "{\"name\":\"25ef3fd42c0d63d26bcc\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0.8780487804878049,\"y\":6.146341463414634,\"z\":10000,\"width\":149.26829268292684,\"height\":705.9512195121952,\"tabOrder\":9003}}],\"singleVisual\":{\"visualType\":\"image\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"imageUrl\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"PUltTransmissao2472592351757117.png\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 705.95,
+          "width": 149.27,
+          "x": 0.88,
+          "y": 6.15,
+          "z": 10000.00
+        },
+        {
+          "config": "{\"name\":\"39b8c13b0ac6894ce019\",\"layouts\":[{\"id\":0,\"position\":{\"x\":358.3218916857361,\"y\":17.57437070938215,\"z\":2000,\"width\":329.0312738367658,\"height\":168.90922959572845,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Medidas.Média de Espectadores Última Transmissão\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Média de Espectadores Última Transmissão\"},\"Name\":\"Medidas.Média de Espectadores Última Transmissão\",\"NativeReferenceName\":\"Média de Espectadores Última Transmissão\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Média de Espectadores Última Transmissão\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
           "filters": "[]",
           "height": 168.91,
           "width": 329.03,
           "x": 358.32,
           "y": 17.57,
-          "z": 1000.00
+          "z": 2000.00
         },
         {
-          "config": "{\"name\":\"52cd211c1c14390f11f4\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1126.8031496062993,\"y\":0,\"z\":9000,\"width\":153.1968503937008,\"height\":155.21259842519686,\"tabOrder\":9000}}],\"singleVisual\":{\"visualType\":\"image\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"imageUrl\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"twitch-logo-twitch-icon-transp8352739365265052.png\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
-          "filters": "[]",
-          "height": 155.21,
-          "width": 153.20,
-          "x": 1126.80,
-          "y": 0.00,
-          "z": 9000.00
-        },
-        {
-          "config": "{\"name\":\"662c5b03d5406c45655e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":79,\"y\":201,\"width\":264,\"height\":177,\"z\":3000,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Medidas.Clipes Criados\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Clipes Criados\"},\"Name\":\"Medidas.Clipes Criados\",\"NativeReferenceName\":\"Clipes Criados\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Clipes Criados\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "config": "{\"name\":\"662c5b03d5406c45655e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":79,\"y\":201,\"width\":264,\"height\":177,\"z\":4000,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Medidas.Clipes Criados\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Clipes Criados\"},\"Name\":\"Medidas.Clipes Criados\",\"NativeReferenceName\":\"Clipes Criados\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Clipes Criados\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
           "filters": "[]",
           "height": 177.00,
           "width": 264.00,
           "x": 79.00,
           "y": 201.00,
-          "z": 3000.00
+          "z": 4000.00
         },
         {
-          "config": "{\"name\":\"68b10f26586a7f714839\",\"layouts\":[{\"id\":0,\"position\":{\"x\":736.1708619374524,\"y\":0,\"z\":7000,\"width\":329.0312738367658,\"height\":176.72006102212052,\"tabOrder\":7000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Medidas.Máximo de Espectadores Última Transmissão\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Máximo de Espectadores Última Transmissão\"},\"Name\":\"Medidas.Máximo de Espectadores Última Transmissão\",\"NativeReferenceName\":\"Máximo de Espectadores Última Transmissão\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Máximo de Espectadores Última Transmissão\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "config": "{\"name\":\"68b10f26586a7f714839\",\"layouts\":[{\"id\":0,\"position\":{\"x\":736.1708619374524,\"y\":0,\"z\":8000,\"width\":329.0312738367658,\"height\":176.72006102212052,\"tabOrder\":7000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Medidas.Máximo de Espectadores Última Transmissão\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Máximo de Espectadores Última Transmissão\"},\"Name\":\"Medidas.Máximo de Espectadores Última Transmissão\",\"NativeReferenceName\":\"Máximo de Espectadores Última Transmissão\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Máximo de Espectadores Última Transmissão\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
           "filters": "[]",
           "height": 176.72,
           "width": 329.03,
           "x": 736.17,
           "y": 0.00,
-          "z": 7000.00
+          "z": 8000.00
         },
         {
-          "config": "{\"name\":\"78a36b1787574ce0600b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":78.51301115241637,\"y\":392.5650557620818,\"z\":4000,\"width\":399.7026022304833,\"height\":171.3011152416357,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Medidas.Total de Mensagens do Chat da Última Transmissão\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Total de Mensagens do Chat da Última Transmissão\"},\"Name\":\"Medidas.Total de Mensagens do Chat da Última Transmissão\",\"NativeReferenceName\":\"Total de Mensagens do Chat da Última Transmissão\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Total de Mensagens do Chat da Última Transmissão\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "config": "{\"name\":\"6cbe02875a253982b506\",\"layouts\":[{\"id\":0,\"position\":{\"x\":7.024390243902439,\"y\":0,\"z\":11000,\"width\":61.463414634146346,\"height\":64.09756097560975,\"tabOrder\":9002}}],\"singleVisual\":{\"visualType\":\"image\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"imageUrl\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"twitch-logo-twitch-icon-transp8352739365265052.png\"}}}}}]},\"vcObjects\":{\"visualLink\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'WebUrl'\"}}},\"webUrl\":{\"expr\":{\"Literal\":{\"Value\":\"'https://www.twitch.tv/mrcampanatti'\"}}},\"tooltip\":{\"expr\":{\"Literal\":{\"Value\":\"'Meu Canal da Twitch'\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 64.10,
+          "width": 61.46,
+          "x": 7.02,
+          "y": 0.00,
+          "z": 11000.00
+        },
+        {
+          "config": "{\"name\":\"78a36b1787574ce0600b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":78.51301115241637,\"y\":392.5650557620818,\"z\":5000,\"width\":399.7026022304833,\"height\":171.3011152416357,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Medidas.Total de Mensagens do Chat da Última Transmissão\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Total de Mensagens do Chat da Última Transmissão\"},\"Name\":\"Medidas.Total de Mensagens do Chat da Última Transmissão\",\"NativeReferenceName\":\"Total de Mensagens do Chat da Última Transmissão\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Total de Mensagens do Chat da Última Transmissão\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
           "filters": "[]",
           "height": 171.30,
           "width": 399.70,
           "x": 78.51,
           "y": 392.57,
-          "z": 4000.00
+          "z": 5000.00
         },
         {
-          "config": "{\"name\":\"cb4be3e0dd49529e9d8d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":78.85232067510549,\"y\":14.042194092827005,\"z\":0,\"width\":263.5611814345992,\"height\":177.1476793248945,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Medidas.Formato H/M\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Duração da Transmissão\"},\"Name\":\"Medidas.Formato H/M\",\"NativeReferenceName\":\"Duração da Transmissão\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Duração\"}}}]},\"drillFilterOtherVisuals\":true,\"filterSortOrder\":3,\"hasDefaultSort\":true}}",
+          "config": "{\"name\":\"b6e543f4ec7c9caa06aa\",\"layouts\":[{\"id\":0,\"position\":{\"x\":7.024390243902439,\"y\":6.146341463414634,\"z\":0,\"width\":1261.7560975609756,\"height\":705.9512195121952,\"tabOrder\":9001}}],\"singleVisual\":{\"visualType\":\"shape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"shape\":[{\"properties\":{\"tileShape\":{\"expr\":{\"Literal\":{\"Value\":\"'rectangleRounded'\"}}},\"rectangleRoundedCurve\":{\"expr\":{\"Literal\":{\"Value\":\"3L\"}}}}}],\"rotation\":[{\"properties\":{\"shapeAngle\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}}}],\"fill\":[{\"properties\":{\"fillColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#FFFFFF'\"}}}}}},\"selector\":{\"id\":\"default\"}}],\"outline\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 705.95,
+          "width": 1261.76,
+          "x": 7.02,
+          "y": 6.15,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"cb4be3e0dd49529e9d8d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":78.85232067510549,\"y\":14.042194092827005,\"z\":1000,\"width\":263.5611814345992,\"height\":177.1476793248945,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Medidas.Formato H/M\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Duração da Transmissão\"},\"Name\":\"Medidas.Formato H/M\",\"NativeReferenceName\":\"Duração da Transmissão\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Duração\"}}}]},\"drillFilterOtherVisuals\":true,\"filterSortOrder\":3,\"hasDefaultSort\":true}}",
           "filters": "[{\"name\":\"Filterc8635e04e57a47d66e29\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Medidas\"}},\"Property\":\"Horas Transmitidas\"}},\"type\":\"Advanced\",\"howCreated\":1,\"isHiddenInViewMode\":false,\"ordinal\":0}]",
           "height": 177.15,
           "width": 263.56,
           "x": 78.85,
           "y": 14.04,
-          "z": 0.00
+          "z": 1000.00
         },
         {
-          "config": "{\"name\":\"d064adb7db145520ddc0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":706.8802440884821,\"y\":201.12890922959573,\"z\":6000,\"width\":388.58886346300534,\"height\":176.72006102212052,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Medidas.Participantes Únicos no Chat na Última Transmissão\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Seguidores na Última Transmissão\"},\"Name\":\"Medidas.Participantes Únicos no Chat na Última Transmissão\",\"NativeReferenceName\":\"Seguidores na Última Transmissão\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Seguidores na Última Transmissão\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "config": "{\"name\":\"d064adb7db145520ddc0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":706.8802440884821,\"y\":201.12890922959573,\"z\":7000,\"width\":388.58886346300534,\"height\":176.72006102212052,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Medidas.Participantes Únicos no Chat na Última Transmissão\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Seguidores na Última Transmissão\"},\"Name\":\"Medidas.Participantes Únicos no Chat na Última Transmissão\",\"NativeReferenceName\":\"Seguidores na Última Transmissão\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Seguidores na Última Transmissão\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
           "filters": "[]",
           "height": 176.72,
           "width": 388.59,
           "x": 706.88,
           "y": 201.13,
-          "z": 6000.00
+          "z": 7000.00
         },
         {
-          "config": "{\"name\":\"d4801fd7a4529741304d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":980.3410852713179,\"y\":391.93798449612405,\"z\":2000,\"width\":299.6589147286822,\"height\":284.7751937984496,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"Medidas.Visualiz. ao vivo na Última Transmissão\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Visualiz. ao vivo na Última Transmissão\"},\"Name\":\"Medidas.Visualiz. ao vivo na Última Transmissão\",\"NativeReferenceName\":\"Visualiz. ao vivo na Última Transmissão\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Visualiz. ao vivo na Última Transmissão\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"image\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'top'\"}}},\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'Bottom'\"}}},\"image\":{\"image\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'espectadores.png'\"}}},\"url\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"espectadores26226305408393946.png\"}}},\"scaling\":{\"expr\":{\"Literal\":{\"Value\":\"'Normal'\"}}}}}},\"selector\":{\"metadata\":\"Medidas.Visualiz. ao vivo na Última Transmissão\"}}]}}}",
+          "config": "{\"name\":\"d4801fd7a4529741304d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":980.3410852713179,\"y\":391.93798449612405,\"z\":3000,\"width\":299.6589147286822,\"height\":284.7751937984496,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"Medidas.Visualiz. ao vivo na Última Transmissão\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Visualiz. ao vivo na Última Transmissão\"},\"Name\":\"Medidas.Visualiz. ao vivo na Última Transmissão\",\"NativeReferenceName\":\"Visualiz. ao vivo na Última Transmissão\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Visualiz. ao vivo na Última Transmissão\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"image\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'top'\"}}},\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'Bottom'\"}}},\"image\":{\"image\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'espectadores.png'\"}}},\"url\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"espectadores26226305408393946.png\"}}},\"scaling\":{\"expr\":{\"Literal\":{\"Value\":\"'Normal'\"}}}}}},\"selector\":{\"metadata\":\"Medidas.Visualiz. ao vivo na Última Transmissão\"}}]}}}",
           "filters": "[]",
           "height": 284.78,
           "width": 299.66,
           "x": 980.34,
           "y": 391.94,
-          "z": 2000.00
+          "z": 3000.00
         },
         {
-          "config": "{\"name\":\"fcb6a6b744e700bd9c0a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":523.3257055682685,\"y\":495.98779557589626,\"z\":5000,\"width\":386.6361556064073,\"height\":170.8619374523265,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Medidas.Duração dos Anúncios na Última Transmissão\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Duração Total dos Anúncios na Última Transmissão\"},\"Name\":\"Medidas.Duração dos Anúncios na Última Transmissão\",\"NativeReferenceName\":\"Duração Total dos Anúncios na Última Transmissão\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Duração Total dos Anúncios na Última Transmissão\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "config": "{\"name\":\"fcb6a6b744e700bd9c0a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":523.3257055682685,\"y\":495.98779557589626,\"z\":6000,\"width\":386.6361556064073,\"height\":170.8619374523265,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Medidas.Duração dos Anúncios na Última Transmissão\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Duração Total dos Anúncios na Última Transmissão\"},\"Name\":\"Medidas.Duração dos Anúncios na Última Transmissão\",\"NativeReferenceName\":\"Duração Total dos Anúncios na Última Transmissão\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Duração Total dos Anúncios na Última Transmissão\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
           "filters": "[]",
           "height": 170.86,
           "width": 386.64,
           "x": 523.33,
           "y": 495.99,
-          "z": 5000.00
+          "z": 6000.00
         }
       ],
       "width": 1280.00
@@ -639,15 +662,6 @@
           "z": 6000.00
         },
         {
-          "config": "{\"name\":\"14483ecb418d02a58aa8\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1.7560975609756098,\"y\":6.146341463414634,\"z\":15000,\"width\":55.31707317073171,\"height\":52.6829268292683,\"tabOrder\":14000}}],\"singleVisual\":{\"visualType\":\"image\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"imageUrl\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"twitch-logo-twitch-icon-transp8352739365265052.png\"}}}}}]},\"vcObjects\":{\"visualLink\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'WebUrl'\"}}},\"webUrl\":{\"expr\":{\"Literal\":{\"Value\":\"'https://www.twitch.tv/mrcampanatti'\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
-          "filters": "[]",
-          "height": 52.68,
-          "width": 55.32,
-          "x": 1.76,
-          "y": 6.15,
-          "z": 15000.00
-        },
-        {
           "config": "{\"name\":\"29d8160442956411ec43\",\"layouts\":[{\"id\":0,\"position\":{\"x\":956.1951219512196,\"y\":166.82926829268294,\"z\":9000,\"width\":300.2926829268293,\"height\":150.14634146341464,\"tabOrder\":9000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Medidas.Receita Inscrições Pagas\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Receita Inscrições Pagas\"},\"Name\":\"Medidas.Receita Inscrições Pagas\",\"NativeReferenceName\":\"Receita Inscrições Pagas\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Receita Inscrições Pagas\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
           "filters": "[]",
           "height": 150.15,
@@ -664,6 +678,15 @@
           "x": 308.20,
           "y": 241.46,
           "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"7cf34010be4a98a304e1\",\"layouts\":[{\"id\":0,\"position\":{\"x\":52.6829268292683,\"y\":648.8780487804878,\"z\":15003,\"width\":39.51219512195122,\"height\":44.78048780487805,\"tabOrder\":16002}}],\"singleVisual\":{\"visualType\":\"image\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"imageUrl\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"ICONE_LINKEDIN6825402059002523.png\"}}}}}]},\"vcObjects\":{\"visualLink\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'WebUrl'\"}}},\"tooltip\":{\"expr\":{\"Literal\":{\"Value\":\"'Meu LinkedIn'\"}}},\"webUrl\":{\"expr\":{\"Literal\":{\"Value\":\"'https://www.linkedin.com/in/filipe-campanati-aa1474b7'\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 44.78,
+          "width": 39.51,
+          "x": 52.68,
+          "y": 648.88,
+          "z": 15003.00
         },
         {
           "config": "{\"name\":\"82852731074bb31ae98c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":357.3658536585366,\"y\":560.1951219512196,\"z\":11000,\"width\":922.829268292683,\"height\":159.8048780487805,\"tabOrder\":7000}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"Analytics_e_receita_por_dia_de_Jan_10_2024_a_Feb_8_2024.Data.Variation.Hierarquia de datas.Ano\"},{\"queryRef\":\"Analytics_e_receita_por_dia_de_Jan_10_2024_a_Feb_8_2024.Data.Variation.Hierarquia de datas.Mês\",\"active\":true},{\"queryRef\":\"Analytics_e_receita_por_dia_de_Jan_10_2024_a_Feb_8_2024.Data.Variation.Hierarquia de datas.Dia\"}],\"Y\":[{\"queryRef\":\"Medidas.Receita Anúncios\"},{\"queryRef\":\"Medidas.Receita Inscrições Pagas\"},{\"queryRef\":\"Medidas.Receita Sub Prime\"},{\"queryRef\":\"Medidas.Receita Bits\"},{\"queryRef\":\"Medidas.Receita Inscrições de Presente\"},{\"queryRef\":\"Medidas.Receita Patrocínios\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"Analytics e receita por dia\",\"Type\":0},{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Name\":\"Variation\",\"Property\":\"Data\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Dia\"},\"Name\":\"Analytics_e_receita_por_dia_de_Jan_10_2024_a_Feb_8_2024.Data.Variation.Hierarquia de datas.Dia\",\"NativeReferenceName\":\"Data Dia\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Receita Anúncios\"},\"Name\":\"Medidas.Receita Anúncios\",\"NativeReferenceName\":\"Anúncios\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Receita Inscrições Pagas\"},\"Name\":\"Medidas.Receita Inscrições Pagas\",\"NativeReferenceName\":\"Receita Inscrições Pagas\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Receita Sub Prime\"},\"Name\":\"Medidas.Receita Sub Prime\",\"NativeReferenceName\":\"Receita Sub Prime\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Receita Bits\"},\"Name\":\"Medidas.Receita Bits\",\"NativeReferenceName\":\"Receita Bits\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Name\":\"Variation\",\"Property\":\"Data\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Ano\"},\"Name\":\"Analytics_e_receita_por_dia_de_Jan_10_2024_a_Feb_8_2024.Data.Variation.Hierarquia de datas.Ano\",\"NativeReferenceName\":\"Data Ano\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Name\":\"Variation\",\"Property\":\"Data\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Mês\"},\"Name\":\"Analytics_e_receita_por_dia_de_Jan_10_2024_a_Feb_8_2024.Data.Variation.Hierarquia de datas.Mês\",\"NativeReferenceName\":\"Data Mês\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Receita Inscrições de Presente\"},\"Name\":\"Medidas.Receita Inscrições de Presente\",\"NativeReferenceName\":\"Receita Inscrições de Presente\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Receita Patrocínios\"},\"Name\":\"Medidas.Receita Patrocínios\",\"NativeReferenceName\":\"Receita Patrocínios\"}]},\"columnProperties\":{\"Medidas.Receita Anúncios\":{\"displayName\":\"Anúncios\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"legend\":[{\"properties\":{\"labelColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"16D\"}}},\"showTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"valueAxis\":[{\"properties\":{\"gridlineColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"titleColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"labelColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"gridlineShow\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"categoryAxis\":[{\"properties\":{\"labelColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"maxMarginFactor\":{\"expr\":{\"Literal\":{\"Value\":\"35L\"}}},\"titleColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"gridlineShow\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"axisType\":{\"expr\":{\"Literal\":{\"Value\":\"'Categorical'\"}}}}}],\"ribbonBands\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"totals\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}},{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}},\"selector\":{\"data\":[{\"dataViewWildcard\":{\"matchingOption\":1}}]}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#EC00AE'\"}}}}}},\"selector\":{\"metadata\":\"Medidas.Receita Bits\"}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#C62C60'\"}}}}}},\"selector\":{\"metadata\":\"Medidas.Receita Anúncios\"}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#F9F871'\"}}}}}},\"selector\":{\"metadata\":\"Medidas.Receita Inscrições de Presente\"}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#FF7545'\"}}}}}},\"selector\":{\"metadata\":\"Medidas.Receita Patrocínios\"}}],\"zoom\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"title\":[{\"properties\":{\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Overview da Receita ao longo do Tempo'\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}}}}],\"dropShadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"preset\":{\"expr\":{\"Literal\":{\"Value\":\"'Bottom'\"}}},\"angle\":{\"expr\":{\"Literal\":{\"Value\":\"90L\"}}},\"shadowDistance\":{\"expr\":{\"Literal\":{\"Value\":\"10L\"}}},\"shadowBlur\":{\"expr\":{\"Literal\":{\"Value\":\"10L\"}}},\"shadowSpread\":{\"expr\":{\"Literal\":{\"Value\":\"3L\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"70L\"}}}}}]}}}",
@@ -684,6 +707,15 @@
           "z": 7000.00
         },
         {
+          "config": "{\"name\":\"8439c3e5c471609d350e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":52.6829268292683,\"y\":604.9756097560976,\"z\":15002,\"width\":39.51219512195122,\"height\":43.90243902439025,\"tabOrder\":16001}}],\"singleVisual\":{\"visualType\":\"image\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"imageUrl\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"ICONE_GITHUB07271913733679525.png\"}}}}}]},\"vcObjects\":{\"visualLink\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'WebUrl'\"}}},\"webUrl\":{\"expr\":{\"Literal\":{\"Value\":\"'https://github.com/MrCampanatti'\"}}},\"tooltip\":{\"expr\":{\"Literal\":{\"Value\":\"'Meu GitHub'\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 43.90,
+          "width": 39.51,
+          "x": 52.68,
+          "y": 604.98,
+          "z": 15002.00
+        },
+        {
           "config": "{\"name\":\"8b22cca1ed35cc730b3d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":664.3448858833477,\"y\":172.0371935756551,\"z\":8000,\"width\":300.79459002535924,\"height\":150.39729501267962,\"tabOrder\":8000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Medidas.Inscrições Recebidas\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Novas Inscrições\"},\"Name\":\"Medidas.Inscrições Recebidas\",\"NativeReferenceName\":\"Inscrições Recebidas\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Novas Inscrições\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
           "filters": "[]",
           "height": 150.40,
@@ -691,6 +723,15 @@
           "x": 664.34,
           "y": 172.04,
           "z": 8000.00
+        },
+        {
+          "config": "{\"name\":\"91f5c34000c36a1755c4\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0.8780487804878049,\"y\":1.7560975609756098,\"z\":15001,\"width\":61.463414634146346,\"height\":64.09756097560975,\"tabOrder\":16000}}],\"singleVisual\":{\"visualType\":\"image\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"imageUrl\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"twitch-logo-twitch-icon-transp8352739365265052.png\"}}}}}]},\"vcObjects\":{\"visualLink\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'WebUrl'\"}}},\"webUrl\":{\"expr\":{\"Literal\":{\"Value\":\"'https://www.twitch.tv/mrcampanatti'\"}}},\"tooltip\":{\"expr\":{\"Literal\":{\"Value\":\"'Meu Canal da Twitch'\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 64.10,
+          "width": 61.46,
+          "x": 0.88,
+          "y": 1.76,
+          "z": 15001.00
         },
         {
           "config": "{\"name\":\"b600c9f05aa670761b81\",\"layouts\":[{\"id\":0,\"position\":{\"x\":232.6829268292683,\"y\":28.097560975609756,\"z\":2000,\"width\":175.609756097561,\"height\":150.14634146341464,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Medidas.Receita\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Receita\"},\"Name\":\"Medidas.Receita\",\"NativeReferenceName\":\"Receita\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"Receita\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
@@ -719,7 +760,7 @@
           "z": 13000.00
         },
         {
-          "config": "{\"name\":\"e7f844b18c6a879bc985\",\"layouts\":[{\"id\":0,\"position\":{\"x\":5.2682926829268295,\"y\":10.536585365853659,\"z\":14500,\"width\":134.34146341463415,\"height\":700.6829268292684,\"tabOrder\":15000}}],\"singleVisual\":{\"visualType\":\"image\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"imageUrl\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"PReceita04213434566467744.png\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "config": "{\"name\":\"e7f844b18c6a879bc985\",\"layouts\":[{\"id\":0,\"position\":{\"x\":5.2682926829268295,\"y\":10.536585365853659,\"z\":14500,\"width\":134.34146341463415,\"height\":700.6829268292684,\"tabOrder\":14000}}],\"singleVisual\":{\"visualType\":\"image\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"imageUrl\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"PReceita04213434566467744.png\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
           "filters": "[]",
           "height": 700.68,
           "width": 134.34,
@@ -745,7 +786,7 @@
           "z": 5000.00
         },
         {
-          "config": "{\"name\":\"f3bd9612ac505e6e4032\",\"layouts\":[{\"id\":0,\"position\":{\"x\":7.024390243902439,\"y\":11.414634146341465,\"z\":0,\"width\":1261.7560975609756,\"height\":700.6829268292684,\"tabOrder\":16000}}],\"singleVisual\":{\"visualType\":\"shape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"shape\":[{\"properties\":{\"tileShape\":{\"expr\":{\"Literal\":{\"Value\":\"'rectangleRounded'\"}}},\"rectangleRoundedCurve\":{\"expr\":{\"Literal\":{\"Value\":\"3L\"}}}}}],\"rotation\":[{\"properties\":{\"shapeAngle\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}}}],\"fill\":[{\"properties\":{\"fillColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#FFFFFF'\"}}}}}},\"selector\":{\"id\":\"default\"}}],\"outline\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "config": "{\"name\":\"f3bd9612ac505e6e4032\",\"layouts\":[{\"id\":0,\"position\":{\"x\":7.024390243902439,\"y\":11.414634146341465,\"z\":0,\"width\":1261.7560975609756,\"height\":700.6829268292684,\"tabOrder\":15000}}],\"singleVisual\":{\"visualType\":\"shape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"shape\":[{\"properties\":{\"tileShape\":{\"expr\":{\"Literal\":{\"Value\":\"'rectangleRounded'\"}}},\"rectangleRoundedCurve\":{\"expr\":{\"Literal\":{\"Value\":\"3L\"}}}}}],\"rotation\":[{\"properties\":{\"shapeAngle\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}}}],\"fill\":[{\"properties\":{\"fillColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#FFFFFF'\"}}}}}},\"selector\":{\"id\":\"default\"}}],\"outline\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
           "filters": "[]",
           "height": 700.68,
           "width": 1261.76,

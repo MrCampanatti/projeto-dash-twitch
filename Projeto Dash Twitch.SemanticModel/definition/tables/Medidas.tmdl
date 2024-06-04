@@ -30,7 +30,7 @@ table Medidas
 		formatString: 0
 		lineageTag: da3fa250-f947-4e05-b21b-b1c623d38cf9
 
-	measure 'Máximo Viewers Simultâneos' = SUM('Analytics e receita por dia'[Máximo de espectadores])
+	measure 'Máximo Viewers Simultâneos' = MAX('Analytics e receita por dia'[Máximo de espectadores])
 		formatString: 0
 		lineageTag: eb39ce51-560e-4529-8b3c-3b5d9bf4d91b
 
@@ -82,13 +82,13 @@ table Medidas
 
 		annotation PBI_FormatHint = {"isDateTimeCustom":true}
 
-	measure Duração = CALCULATE(SUM('Analytics e receita por dia'[Minutos transmitidos]), 'Última Sessão de transmissão'[Data])
+	measure 'Obsoleto Duração Última Transmissão' = CALCULATE(SUM('Analytics e receita por dia'[Minutos transmitidos]), 'Última Sessão de transmissão'[Data])
 		formatString: 0.00
 		lineageTag: 5de3adbc-f158-44da-8823-2e28d2308a94
 
 	measure 'Duração da Transmissão' = ```
 			
-			 VAR result = ([Duração]*60)
+			 VAR result = ([Obsoleto Duração Última Transmissão]*60)
 			 VAR hh = IF(LEN(ROUNDDOWN(result/3600,0))=1,"0"&ROUNDDOWN(result/3600,0),ROUNDDOWN(result/3600,0))
 			 VAR mm =IF(LEN(ROUNDDOWN((result - (hh*3600)) / 60,0))=1,"0"&ROUNDDOWN((result - (hh*3600)) / 60,0),ROUNDDOWN((result - (hh*3600)) / 60,0))
 			 VAR ss = IF(LEN(MOD(result - (hh*3600),60))=1,"0"&MOD(result - (hh*3600),60),MOD(result - (hh*3600),60))
@@ -128,7 +128,7 @@ table Medidas
 
 		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
 
-	measure 'Receita Bits' = SUM('Analytics e receita por dia'[Receita de Bits])
+	measure 'Receita Bits' = SUMX('Analytics e receita por dia', 'Analytics e receita por dia'[Receita de Bits] + 'Analytics e receita por dia'[Receita de outras interações com Bits])
 		formatString: "R$"\ #,0.###############;-"R$"\ #,0.###############;"R$"\ #,0.###############
 		lineageTag: 91450fd9-c1a9-44d3-ae9d-9d675ac552d6
 
@@ -172,7 +172,7 @@ table Medidas
 		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: abdac104-91f6-405b-ae06-2dae9a75883d
 
-	measure 'Receita Inscrições de Presente' = SUM('Analytics e receita por dia'[Receita de inscrições de presente]) + SUM('Analytics e receita por dia'[Receita de inscrições de presente de múltiplos meses])
+	measure 'Receita Inscrições de Presente' = SUMX('Analytics e receita por dia','Analytics e receita por dia'[Receita de inscrições de presente] + 'Analytics e receita por dia'[Receita de inscrições de presente de múltiplos meses])
 		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
 		lineageTag: ebc4e2ca-f0f6-4027-b474-3f4d35df1de5
 
@@ -183,6 +183,24 @@ table Medidas
 	measure 'Novas Inscrições na Última Transmissão' = SUM('Última Sessão de transmissão'[Novas inscrições])
 		formatString: 0
 		lineageTag: 193fbf50-2c82-4df1-b750-ddefbd46d349
+
+	measure 'Receita Vendas de Jogos' = SUM('Analytics e receita por dia'[Receita das vendas de jogos])
+		formatString: "R$"\ #,0.###############;-"R$"\ #,0.###############;"R$"\ #,0.###############
+		lineageTag: 0e681e3d-174b-4075-9404-84b3583cd4e8
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure 'Receita Extensões' = SUM('Analytics e receita por dia'[Receita de extensões])
+		formatString: "R$"\ #,0.###############;-"R$"\ #,0.###############;"R$"\ #,0.###############
+		lineageTag: faf84856-8121-4b45-b11e-00758e07bdab
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure 'Receita Turbo' = SUM('Analytics e receita por dia'[Receita do Turbo])
+		formatString: "R$"\ #,0.###############;-"R$"\ #,0.###############;"R$"\ #,0.###############
+		lineageTag: b2242739-1f4b-47f3-b1b5-842c3105f2ca
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
 
 	partition Medidas = m
 		mode: import

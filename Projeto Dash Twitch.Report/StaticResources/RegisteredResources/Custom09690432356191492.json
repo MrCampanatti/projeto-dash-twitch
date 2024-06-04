@@ -492,6 +492,15 @@
     "label": {
       "color": "#000000",
       "fontFace": "'Segoe UI Light', wf_segoe-ui_light, helvetica, arial, sans-serif"
+    },
+    "callout": {
+      "fontFace": "'Segoe UI Light', wf_segoe-ui_light, helvetica, arial, sans-serif"
+    },
+    "title": {
+      "fontFace": "'Segoe UI Light', wf_segoe-ui_light, helvetica, arial, sans-serif"
+    },
+    "header": {
+      "fontFace": "'Segoe UI Light', wf_segoe-ui_light, helvetica, arial, sans-serif"
     }
   }
 }

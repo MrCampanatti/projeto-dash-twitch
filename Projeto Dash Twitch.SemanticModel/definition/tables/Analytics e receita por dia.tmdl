@@ -468,6 +468,15 @@ table 'Analytics e receita por dia'
 
 		annotation UnderlyingDateTimeDataType = Time
 
+	column Rendimento = 'Analytics e receita por dia'[Inscrições Prime] + 'Analytics e receita por dia'[Total de inscrições de presente] + 'Analytics e receita por dia'[Total de inscrições pagas] + 'Analytics e receita por dia'[Total de inscrições de presente de múltiplos meses]
+		dataType: int64
+		formatString: 0
+		lineageTag: dab28b0e-fc65-4039-aa20-b3449973a648
+		summarizeBy: sum
+		isDataTypeInferred
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 'Analytics e receita por dia' = m
 		mode: import
 		source =

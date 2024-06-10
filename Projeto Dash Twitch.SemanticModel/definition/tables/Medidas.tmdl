@@ -82,13 +82,13 @@ table Medidas
 
 		annotation PBI_FormatHint = {"isDateTimeCustom":true}
 
-	measure 'Obsoleto Duração Última Transmissão' = CALCULATE(SUM('Analytics e receita por dia'[Minutos transmitidos]), 'Última Sessão de transmissão'[Data])
+	measure 'Duração Última Transmissão' = CALCULATE(SUM('Analytics e receita por dia'[Minutos transmitidos]), 'Última Sessão de transmissão'[Data])
 		formatString: 0.00
 		lineageTag: 5de3adbc-f158-44da-8823-2e28d2308a94
 
 	measure 'Duração da Transmissão' = ```
 			
-			 VAR result = ([Obsoleto Duração Última Transmissão]*60)
+			 VAR result = ([Duração Última Transmissão]*60)
 			 VAR hh = IF(LEN(ROUNDDOWN(result/3600,0))=1,"0"&ROUNDDOWN(result/3600,0),ROUNDDOWN(result/3600,0))
 			 VAR mm =IF(LEN(ROUNDDOWN((result - (hh*3600)) / 60,0))=1,"0"&ROUNDDOWN((result - (hh*3600)) / 60,0),ROUNDDOWN((result - (hh*3600)) / 60,0))
 			 VAR ss = IF(LEN(MOD(result - (hh*3600),60))=1,"0"&MOD(result - (hh*3600),60),MOD(result - (hh*3600),60))
@@ -152,14 +152,6 @@ table Medidas
 		formatString: 0
 		lineageTag: df07db47-1123-4b02-a2a5-723039d1666c
 
-	measure 'Duração Total dos Anúncios na Última Transmissão' =
-			VAR result = SUM('Última Sessão de transmissão'[Anúncios comerciais])
-			 VAR hh = IF(LEN(ROUNDDOWN(result/3600,0))=1,"0"&ROUNDDOWN(result/3600,0),ROUNDDOWN(result/3600,0))
-			 VAR mm =IF(LEN(ROUNDDOWN((result - (hh*3600)) / 60,0))=1,"0"&ROUNDDOWN((result - (hh*3600)) / 60,0),ROUNDDOWN((result - (hh*3600)) / 60,0))
-			 VAR ss = IF(LEN(MOD(result - (hh*3600),60))=1,"0"&MOD(result - (hh*3600),60),MOD(result - (hh*3600),60))
-			 RETURN IF(hh&":"&mm&":"&ROUND(ss,0) = "::",BLANK(),hh&":"&mm&":"& IF(LEN(ROUNDDOWN(ss,0))=1,"0"&ROUNDDOWN(ss,0),ROUNDDOWN(ss,0)))
-		lineageTag: 1c4a3e80-86d8-445a-8349-cdc8997fcbf7
-
 	measure 'Clipes Criados' = SUM('Última Sessão de transmissão'[Clipes criados])
 		formatString: 0
 		lineageTag: aef128ab-1815-4ade-a6d0-f48a96e4f7a7
@@ -201,6 +193,16 @@ table Medidas
 		lineageTag: b2242739-1f4b-47f3-b1b5-842c3105f2ca
 
 		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure 'Espectadores Únicos Última Transmissão' = CALCULATE(MAX('Analytics e receita por dia'[Espectadores únicos]), LASTNONBLANK('Analytics e receita por dia'[Data], MAX('Analytics e receita por dia'[Espectadores únicos])))
+		formatString: 0
+		lineageTag: 638ceb9d-ec44-4e5d-ac9a-51476056b53f
+
+	measure 'Participantes únicos do chat Última Transmissão' = ```
+			MAX('Última Sessão de transmissão'[Part. do chat]) 
+			```
+		formatString: 0
+		lineageTag: 48e4802c-d478-493b-9645-df849f184b2e
 
 	partition Medidas = m
 		mode: import

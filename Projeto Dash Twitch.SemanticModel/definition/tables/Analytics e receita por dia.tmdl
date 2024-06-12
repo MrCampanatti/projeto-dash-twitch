@@ -513,5 +513,3 @@ table 'Analytics e receita por dia'
 
 	annotation PBI_ResultType = Table
 
-	annotation PBI_NavigationStepName = Navegação
-

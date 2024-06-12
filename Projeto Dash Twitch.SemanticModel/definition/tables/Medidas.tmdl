@@ -204,6 +204,18 @@ table Medidas
 		formatString: 0
 		lineageTag: 48e4802c-d478-493b-9645-df849f184b2e
 
+	measure 'Viz. dos Clipes Última Transmissão' = SUM('Última Sessão de transmissão'[Visualiz. de clipes])
+		formatString: 0
+		lineageTag: d75e46a6-c7ab-4088-9919-7f7fab1d8118
+
+	measure 'Tempo Transmitido de Anúncios Última Transmissão' =
+			VAR result = SUM('Última Sessão de transmissão'[Anúncios comerciais])
+			 VAR hh = IF(LEN(ROUNDDOWN(result/3600,0))=1,"0"&ROUNDDOWN(result/3600,0),ROUNDDOWN(result/3600,0))
+			 VAR mm =IF(LEN(ROUNDDOWN((result - (hh*3600)) / 60,0))=1,"0"&ROUNDDOWN((result - (hh*3600)) / 60,0),ROUNDDOWN((result - (hh*3600)) / 60,0))
+			 VAR ss = IF(LEN(MOD(result - (hh*3600),60))=1,"0"&MOD(result - (hh*3600),60),MOD(result - (hh*3600),60))
+			 RETURN IF(hh&":"&mm&":"&ROUND(ss,0) = "::",BLANK(),hh&":"&mm&":"& IF(LEN(ROUNDDOWN(ss,0))=1,"0"&ROUNDDOWN(ss,0),ROUNDDOWN(ss,0)))
+		lineageTag: 20a24f52-b0f1-4894-9284-ea12e77fc7b6
+
 	partition Medidas = m
 		mode: import
 		source =

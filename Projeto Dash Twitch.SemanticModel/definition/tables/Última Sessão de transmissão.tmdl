@@ -159,5 +159,3 @@ table 'Última Sessão de transmissão'
 
 	annotation PBI_ResultType = Table
 
-	annotation PBI_NavigationStepName = Navegação
-

@@ -18,7 +18,7 @@ table Medidas
 		lineageTag: c75d69f2-c5b5-4478-85ff-58c3fac867db
 
 	measure Espectadores = SUM('Analytics e receita por dia'[Espectadores únicos])
-		formatString: 0
+		formatString: #,0
 		lineageTag: 46dec7f7-6c6c-4b9a-9441-41bf40577330
 
 	measure 'Média de Espectadores' = SUM('Analytics e receita por dia'[Média de espectadores])
@@ -215,6 +215,40 @@ table Medidas
 			 VAR ss = IF(LEN(MOD(result - (hh*3600),60))=1,"0"&MOD(result - (hh*3600),60),MOD(result - (hh*3600),60))
 			 RETURN IF(hh&":"&mm&":"&ROUND(ss,0) = "::",BLANK(),hh&":"&mm&":"& IF(LEN(ROUNDDOWN(ss,0))=1,"0"&ROUNDDOWN(ss,0),ROUNDDOWN(ss,0)))
 		lineageTag: 20a24f52-b0f1-4894-9284-ea12e77fc7b6
+
+	measure 'Calendário Transmissões' = ```
+			
+			 VAR vDia =
+			 SELECTEDVALUE('Analytics e receita por dia'[Dia])
+			 VAR vTotal_Espectadores = [Espectadores]
+			 VAR vTotal_Espectadores_Formatado = 
+			 SWITCH(
+			    TRUE(),
+			    vTotal_Espectadores >= 1000000000, FORMAT(vTotal_Espectadores, "#,0,,,.00 bi"),
+			    vTotal_Espectadores >= 1000000, FORMAT(vTotal_Espectadores, "#,0,,.00 mi"),
+			    vTotal_Espectadores >= 1000, FORMAT(vTotal_Espectadores, "#,0,.00 k"),
+			    FORMAT(vTotal_Espectadores, "#")
+			 )
+			 RETURN vDia & UNICHAR(10) & vTotal_Espectadores
+			```
+		lineageTag: f8543238-51e4-4abe-aab5-628d4be4b423
+
+	measure 'Subtítulo Dinâmico Calendário' = ```
+			
+			 VAR vPeriodo = 
+			 FORMAT(MAX('Analytics e receita por dia'[Data]), "mmm/yyyy")
+			 VAR vTotal_Espectadores = [Espectadores]
+			 VAR vTotal_Espectadores_Formatado = 
+			 SWITCH(
+			    TRUE(),
+			    vTotal_Espectadores >= 1000000000, FORMAT(vTotal_Espectadores, "#,0,,,.00 bi"),
+			    vTotal_Espectadores >= 1000000, FORMAT(vTotal_Espectadores, "#,0,,.00 mi"),
+			    vTotal_Espectadores >= 1000, FORMAT(vTotal_Espectadores, "#,0,.00 k"),
+			    FORMAT(vTotal_Espectadores, "#")
+			 )
+			RETURN "O Total de Espectadores de "& vPeriodo &" foram " & vTotal_Espectadores_Formatado
+			```
+		lineageTag: 18428062-5ef7-4a14-ac46-1b2e57b01f29
 
 	partition Medidas = m
 		mode: import

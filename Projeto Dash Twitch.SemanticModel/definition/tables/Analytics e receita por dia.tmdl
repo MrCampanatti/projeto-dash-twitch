@@ -477,6 +477,46 @@ table 'Analytics e receita por dia'
 
 		annotation SummarizationSetBy = Automatic
 
+	column 'Semana do Ano' = WEEKNUM('Analytics e receita por dia'[Data])
+		dataType: int64
+		formatString: 0
+		lineageTag: 027e5aaf-1e03-4490-a8bd-e9eb2b4df9ba
+		summarizeBy: sum
+		isDataTypeInferred
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Dia da Semana' = ```
+			FORMAT('Analytics e receita por dia'[Data], "ddd") 
+			```
+		dataType: string
+		lineageTag: c805f5c4-91ee-4a6c-9895-576155cb256e
+		summarizeBy: none
+		isDataTypeInferred
+		sortByColumn: 'Semana Dia'
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Semana Dia' = WEEKDAY('Analytics e receita por dia'[Data], 1 )
+		dataType: int64
+		formatString: 0
+		lineageTag: c0579edb-edff-480e-a3c9-f6231f9856d8
+		summarizeBy: sum
+		isDataTypeInferred
+
+		annotation SummarizationSetBy = Automatic
+
+	column Dia
+		dataType: int64
+		formatString: 0
+		lineageTag: f7d65679-010a-4467-9edd-f4f6abcd1611
+		summarizeBy: sum
+		sourceColumn: Dia
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 'Analytics e receita por dia' = m
 		mode: import
 		source =
@@ -507,9 +547,12 @@ table 'Analytics e receita por dia'
 				    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Colunas Reordenadas",{{"Minutos Assistidos Sem Comercial", Int64.Type}, {"Minutos transmitidos", Int64.Type}}),
 				    #"Linhas Classificadas" = Table.Sort(#"Tipo Alterado1",{{"Minutos transmitidos", Order.Descending}}),
 				    #"Personalização Adicionada1" = Table.AddColumn(#"Linhas Classificadas", "Minutos Transmitidos (Dias)", each [Minutos transmitidos]/1440),
-				    #"Tipo Alterado2" = Table.TransformColumnTypes(#"Personalização Adicionada1",{{"Minutos Transmitidos (Dias)", type duration}})
+				    #"Tipo Alterado2" = Table.TransformColumnTypes(#"Personalização Adicionada1",{{"Minutos Transmitidos (Dias)", type duration}}),
+				    #"Dia Inserido" = Table.AddColumn(#"Tipo Alterado2", "Dia", each Date.Day([Data]), Int64.Type)
 				in
-				    #"Tipo Alterado2"
+				    #"Dia Inserido"
 
 	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegação
 
